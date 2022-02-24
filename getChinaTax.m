@@ -1,4 +1,6 @@
 function tax_total = getChinaTax(income)
+  
+standard_deduction = 5000*12; % 5000 per month
 % [bar, tax_rate_above_bar]
 tax_brackets = [
 0, 0.03
@@ -10,6 +12,7 @@ tax_brackets = [
 960000, 0.45
 ]; % ref: http://www.chinatax.gov.cn/chinatax/n810219/n810744/n3752930/n3752974/c3970366/content.html
 
-tax_total = getTax(income, tax_brackets);
+income = income - standard_deduction;
 
+tax_total = getTax(income, tax_brackets);
 endfunction
