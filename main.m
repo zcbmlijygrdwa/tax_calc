@@ -38,5 +38,5 @@ plot(income_vec,remain_percentage_cn)
 legend("us-single", "us-married", "us-headOfHouse", "cn")
 xlabel("income")
 ylabel("remain percentage")
-
+grid on;
 
